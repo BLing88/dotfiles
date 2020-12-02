@@ -1,0 +1,21 @@
+[user]
+	name = <Brandon Ling>
+	email = "{{ .git.email }}" 
+[color]
+	ui = auto
+[push]
+	default = upstream
+[merge]
+	conflictstyle = diff3
+[core]
+	editor = code -n -w
+	excludesfile = /Users/BLing/.gitignore_global
+[credential]
+	helper = osxkeychain
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[alias]
+        graph = log --all --graph --decorate --oneline
