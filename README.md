@@ -16,4 +16,4 @@ chezmoi update
 ```
 
 [chezmoi]: https://github.com/twpayne/chezmoi
-[template vaiables]: https://github.com/twpayne/chezmoi/blob/master/docs/HOWTO.md#use-templates-to-manage-files-that-vary-from-machine-to-machine
+[template variables]: https://github.com/twpayne/chezmoi/blob/master/docs/HOWTO.md#use-templates-to-manage-files-that-vary-from-machine-to-machine
