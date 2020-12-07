@@ -77,14 +77,24 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up>    :echoe "Use k"<CR>
 nnoremap <Down>  :echoe "Use j"<CR>
 " ...and in insert mode
-inoremap <Left>  <ESC>:echoe "Use h"<CR>
-inoremap <Right> <ESC>:echoe "Use l"<CR>
-inoremap <Up>    <ESC>:echoe "Use k"<CR>
-inoremap <Down>  <ESC>:echoe "Use j"<CR>
+"inoremap <Left>  <ESC>:echoe "Use h"<CR>
+" inoremap <Right> <ESC>:echoe "Use l"<CR>
+" inoremap <Up>    <ESC>:echoe "Use k"<CR>
+" inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
 " Using vim-plug
 call plug#begin('~/.vim/plugged')
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'tpope/vim-fugitive'
+Plug 'pangloss/vim-javascript'    " JavaScript support
+Plug 'leafgarland/typescript-vim' " TypeScript syntax
+Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'jparise/vim-graphql'        " GraphQL syntax
+Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 call plug#end()
+
+" for CoC
+let g:coc_global_extensions = [ 'coc-tsserver', 'coc-prettier', 'coc-eslint' ]
 
