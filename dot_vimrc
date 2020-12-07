@@ -17,6 +17,9 @@ syntax on
 " Disable the default Vim startup message.
 set shortmess+=I
 
+set expandtab
+set shiftwidth=4
+
 " Show line numbers.
 set number
 
