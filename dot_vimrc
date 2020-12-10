@@ -93,8 +93,10 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'jparise/vim-graphql'        " GraphQL syntax
 Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+Plug 'crusoexia/vim-monokai'
 call plug#end()
 
 " for CoC
 let g:coc_global_extensions = [ 'coc-tsserver', 'coc-prettier', 'coc-eslint' ]
 
+colorscheme monokai
