@@ -124,3 +124,5 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # for rbenv
 eval "$(rbenv init -)"
+
+[ -f "/Users/BLing/.ghcup/env" ] && source "/Users/BLing/.ghcup/env" # ghcup-env
