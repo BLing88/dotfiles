@@ -130,3 +130,7 @@ eval "$(rbenv init -)"
 export PATH=$PATH:$HOME/.local/bin
 
 typeset -U PATH path
+
+# for fzf
+# generate ~/.fzf.zsh and ~/.fzf.bash from running $(brew --prefix)/opt/fzf/install
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
