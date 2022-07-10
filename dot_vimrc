@@ -100,6 +100,7 @@ Plug 'jparise/vim-graphql'        " GraphQL syntax
 Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'crusoexia/vim-monokai'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
 
 " for CoC
