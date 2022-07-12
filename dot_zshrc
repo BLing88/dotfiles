@@ -139,5 +139,5 @@ if type rg &> /dev/null; then
   # set fzf to use ripgrep
   export FZF_DEFAULT_COMMAND='rg --files'
   # -m allows us to make multiple selections with Tab or Shift-Tab
-  export FZF_DEFAULT_OPTS='-m --height 50% --borderr'
+  export FZF_DEFAULT_OPTS='-m --height 50% --border'
 fi
