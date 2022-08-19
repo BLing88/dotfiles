@@ -120,6 +120,6 @@ nnoremap <leader>= :wincmd =<cr>
 " for fzf, make :Rg ignore file names when matching, which it does by default
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
-" You have to remap <cr> (carriage return) to make it confirm completion for
-" CoC
-inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+" Use tab to confirm completion for CoC
+inoremap <expr> <tab> coc#pum#visible() ? coc#pum#confirm() : "\<tab>"
+
