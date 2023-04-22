@@ -12,7 +12,8 @@
     "javascriptreact",
     "typescript",
     "typescriptreact",
-    "json"
+    "json",
+    "purescript"
   ],
   "tsserver.formatOnType": true,
   "coc.preferences.formatOnType": true,
@@ -28,6 +29,21 @@
         "hie.yaml"
       ],
       "filetypes": ["haskell", "lhaskell"]
+    },
+    "purescript": {
+      "command": "purescript-language-server",
+      "args": ["--stdio"],
+      "filetypes": ["purescript"],
+      "trace.server": "off",
+      "rootPatterns": ["bower.json", "psc-package.json", "spago.dhall"],
+      "settings": {
+        "purescript": {
+          "addSpagoSources": true,
+          "addNpmPath": true, // Set to true if using a local purty install for formatting
+          "formatter": "purs-tidy"
+          // etc
+        }
+      }
     }
   }
 }

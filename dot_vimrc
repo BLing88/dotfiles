@@ -104,6 +104,7 @@ Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'crusoexia/vim-monokai'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'purescript-contrib/purescript-vim'
 call plug#end()
 
 " for CoC
