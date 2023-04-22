@@ -90,6 +90,8 @@ nnoremap <Down>  :echoe "Use j"<CR>
 " delays and poor user experience.
 set updatetime=300
 
+set termguicolors
+
 " Using vim-plug
 call plug#begin('~/.vim/plugged')
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
@@ -101,7 +103,8 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'jparise/vim-graphql'        " GraphQL syntax
 Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
-Plug 'crusoexia/vim-monokai'
+"Plug 'crusoexia/vim-monokai'
+Plug 'sainnhe/sonokai'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'purescript-contrib/purescript-vim'
@@ -110,7 +113,10 @@ call plug#end()
 " for CoC
 let g:coc_global_extensions = [ 'coc-tsserver', 'coc-prettier', 'coc-eslint' ]
 
-colorscheme monokai
+let g:sonokai_style = 'espresso'
+let g:sonokai_better_performance = 1
+colorscheme sonokai
+
 " Automatically rebalance windows on vim resize
 autocmd VimResized * :wincmd =
 
