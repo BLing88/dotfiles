@@ -108,6 +108,7 @@ Plug 'sainnhe/sonokai'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'purescript-contrib/purescript-vim'
+Plug 'itchyny/lightline.vim'
 call plug#end()
 
 " for CoC
