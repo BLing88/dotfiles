@@ -108,6 +108,7 @@ Plug 'sainnhe/sonokai'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'purescript-contrib/purescript-vim'
+Plug 'puremourning/vimspector'
 Plug 'itchyny/lightline.vim'
 call plug#end()
 
@@ -117,6 +118,17 @@ let g:coc_global_extensions = [ 'coc-tsserver', 'coc-prettier', 'coc-eslint' ]
 let g:sonokai_style = 'espresso'
 let g:sonokai_better_performance = 1
 colorscheme sonokai
+
+let g:lightline = {
+      \ 'colorscheme': 'default',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'relativepath', 'modified' ] ],
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
 
 " Automatically rebalance windows on vim resize
 autocmd VimResized * :wincmd =
@@ -130,4 +142,3 @@ command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-hea
 
 " Use tab to confirm completion for CoC
 inoremap <expr> <tab> coc#pum#visible() ? coc#pum#confirm() : "\<tab>"
-
