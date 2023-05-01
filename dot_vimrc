@@ -117,6 +117,22 @@ let g:coc_global_extensions = [ 'coc-tsserver', 'coc-prettier', 'coc-eslint' ]
 
 let g:sonokai_style = 'espresso'
 let g:sonokai_better_performance = 1
+
+function! SonokaiHighlights() abort
+  " override comment highlighting in sonokai
+  " because it has bad contrast
+  " especially when combined with Visual mode
+  " highlighting
+  " see https://gist.github.com/romainl/379904f91fa40533175dfaec4c833f2f
+  highlight Comment cterm=nocombine guifg=#307b8a guibg=bg
+  highlight Visual guibg=#635b58
+endfunction
+
+augroup MyColors
+  autocmd!
+  autocmd ColorScheme sonokai call SonokaiHighlights()
+augroup End
+
 colorscheme sonokai
 
 let g:lightline = {
